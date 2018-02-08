@@ -1,7 +1,7 @@
 {
-  "name": "ko.loc",
+  "name": "ko-external-view-models",
   "description": "",
-  "main": "index.js",
+  "main": "",
   "authors": [
     "dvcarrot <dvcarrot@yandex.ru>"
   ],
