@@ -1,0 +1,38 @@
+<script type="text/html" id="Template.ViewModel.RequirementsCollection.List">
+    <h2>Participants</h2>
+    <p>Here are the participants:</p>
+    <ul class="person-list" data-bind="template: {name: 'Template.ViewModel.RequirementsCollection.List.Item', foreach: people}"></ul>
+</script>
+
+<script type="text/html" id="Template.ViewModel.RequirementsCollection.List.Item">
+    <li class="person-item">
+        <h3 class="person-name" data-bind="text: name"></h3>
+        <p class="person-text">Credits: <span data-bind="text: credits"></span></p>
+        <p class="person-text person-text--more">
+            more info
+        </p>
+    </li>
+</script>
+
+<script type="text/javascript">
+    (function ($) {
+
+        var Namespace = $.namespace('ViewModel.RequirementsCollection');
+
+        Namespace.List = function (params) {
+            this.people = [
+                {name: 'Ivan', credits: 125},
+                {name: 'Maria', credits: 3200},
+                {name: 'Franklin', credits: 250},
+                {name: 'Mario', credits: 5800}
+            ]
+        }
+
+    })(jQuery);
+</script>
+
+<style>
+    .person-item {
+        color: #333;
+    }
+</style>
